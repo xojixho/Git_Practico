@@ -1,0 +1,77 @@
+changes lifecycle
+
+$git status
+
+  Untracked  |  Staged  |  Committed  |  In remote repository
+
+  file.txt-->|   -->    |    --->     | -->  file.txt 
+
+        $git add  |  $git commit  |  $git push
+
+
+
+
+$git add --> Add changes to stage
+	     Used to begin tracking new files
+	     and to track changes existing files.
+
+$git commit -->  command to take a snapshot of the changes 
+		and save them in the local repository
+		work only for staged files
+
+$git push --> propagates changes to remote
+
+Despues de realizar cambios en un repositorio se pueden ver los cambios
+con 
+
+$git diff
+
+Se necesita hacer stage a los cambios realizados con $git add 
+
+cuando el archivo esta staged $git diff no muestra los cambios.
+
+Agregar $git diff --cached
+
+
+$Git reset  reset cambios antes de commitmen
+
+retorna los archivos al estado unstaged permitiendo ver los cambios
+
+$Git reset --hard
+
+Retroceder (Undo)  los cambios realizados
+
+$git commit
+
+Used to record changes to the repository
+
+__________________
+History structure |
+__________________|
+ 
+Head point to recent commit
+
+ej. 
+   |
+-hash-
+a714a94 (HEAD -> main) Agregado notas para git en Git_basics.txt
+69a6239 (origin/main, origin/HEAD) Initial commit
+
+				      head
+					|
+					|
+		v.1 --> v.2 --> v.3 --> v.4 
+
+the pointer can moves with $git reset command
+to the previous image
+
+sha256 checksum
+
+
+$git log  -->gitVer todo los commit
+
+$git log --oneline --> ver commit hash por linea
+
+desplazar puntero (tomar el hash del commit)
+
+$git reset 69a6239 ---> En este caso vuelve al origen
