@@ -175,6 +175,10 @@ _________________
 |		|
 |     REBASE    |
 |---------------|
+En esencia lo que hace es un merge que cambia el versioning
+del archivo. Por esto otras branch de usuarios podrian tener
+más de un problema.
+
 DANGER!!!
 NEVER DO A REBASE IN A PUBLIC BRANCH!!!!!!
 
