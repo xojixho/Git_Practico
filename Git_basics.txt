@@ -51,21 +51,25 @@ __________________|
  
 Head point to recent commit
 
-ej. 
-   |
--hash-
-a714a94 (HEAD -> main) Agregado notas para git en Git_basics.txt
-69a6239 (origin/main, origin/HEAD) Initial commit
+				       head
+					|
+                                        V
 
-				      head
-					|
-					|
-		v.1 --> v.2 --> v.3 --> v.4 
+ 		v.1 --> v.2 --> v.3 --> v.4 
 
 the pointer can moves with $git reset command
 to the previous image
 
 sha256 checksum
+
+####### ej. with $git log --oneline ###############
+ 
+commit   _____________
+-hash-  |Head in local|
+a714a94 (HEAD -> main) Agregado notas para git en Git_basics.txt
+   |           ______________
+   |	     |Head in remote|
+69a6239 (origin/main, origin/HEAD) Initial commit
 
 
 $git log  -->gitVer todo los commit
@@ -75,3 +79,102 @@ $git log --oneline --> ver commit hash por linea
 desplazar puntero (tomar el hash del commit)
 
 $git reset 69a6239 ---> En este caso vuelve al origen
+
+________________
+|		|
+|     PUSH	|
+|---------------|
+
+$git push
+
+Envia todos los commit locales al repositorio remoto
+y estan disponibles para todo el equipo.
+
+________________
+|		|
+|     PULL	|
+|---------------|
+
+$git pull
+
+consiste de dos pasos internamente
+
+git fetch  --> descarga los archivos del repo. remoto
+		pero no los integra localmente
+git merge --> realiza  la integración al repo.local
+
+
+________________
+|		|
+|     BRANCH	|
+|---------------|
+
+create new  branch
+
+$git branch [branch name]
+
+ver branches
+
+$git branch
+
+cambiar de branch
+
+$git switch [branch name]
+
+
+########para hacer push a un nuevo branch es necesario que exista el 
+	branch en en repo. remoto.
+
+	Para solucionar esto:
+
+	$git push --set-upstream origin [branch name]
+
+ver remote branches
+
+$git branch -r
+
+$git log --oneline
+(revisar los apuntadores)
+
+Eliminar branches
+(hacer estos pasos en orden)
+1) Para eliminar un branch localmente
+
+	$git branch -d new-feature
+
+2)Para eliminar un branch remotamente
+
+	$git puch origin: [branch name]
+
+
+________________
+|		|
+|     CHECKOUT  |
+|---------------|
+
+Tiene dos usos:
+
+1)switch entre diferentes branches
+2)Restore and made changes
+
+$git checkout [branch name]
+
+_________________
+|		|
+|     MERGE     |
+|---------------|
+
+merge dos branches
+
+need to stay in the main branch   
+
+$git merge [branch name]
+ 
+
+_________________
+|		|
+|     REBASE    |
+|---------------|
+DANGER!!!
+NEVER DO A REBASE IN A PUBLIC BRANCH!!!!!!
+
