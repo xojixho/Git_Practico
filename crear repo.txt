@@ -6,6 +6,15 @@ En los dos casos hay que ir a github obviamente a clonar el proyecto.
 git clone [url]
 
 2)Estar en la carpeta del proyecto.
+
+echo "# mintic2021_retos" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/xojixho/mintic2021_retos.git
+git push -u origin main
+
 	$git init
 		agregar files al stage 
 
