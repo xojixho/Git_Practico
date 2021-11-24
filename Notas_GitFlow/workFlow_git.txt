@@ -1,0 +1,41 @@
+Flujos de trabajo
+Para cumplir un buen flujo de trabajo el secreto se encuentra 
+en el correcto manejo y administración de nuestras ramas. Los 
+diferentes tipos de ramas cumplen un objetivo en nuestro 
+correcto manejo del versionamiento
+
+El trabajo se organiza en dos ramas principales:
+
+master: esta rama se considera como la productiva, cualquier 
+commit que tengamos sobre esta debe estar preparada para 
+subirse a producción
+
+develop: esta rama es en la que tenemos el código que conforma 
+	 la siguiente versión planificada de nuestro proyecto
+
+Nota: cada vez que incorporamos código a nuestra rama master, tenemos 
+una nueva versión de nuestro proyecto en producción o solucionamos 
+incidentes reportados en este. Además de las dos ramas vistas, se 
+proponen las siguientes ramas auxiliares, que podemos manejar:
+
+feature: estas ramas las utilizamos para desarrollar nuevas 
+	 características de la aplicación que, una vez terminadas,
+	 se incorporan a la rama develop. Estas rama poseen algunas
+	 características que debemos tener en cuenta, estas son:
+
+		Debemos crearlas a partir de la rama develop
+		Siempre debemos fusionarlas con la rama develop
+
+release: estas ramas las utilizamos para preparar el siguiente 
+	 código en producción. En estas ramas realizamos los 
+	 últimos ajustes y corregimos los últimos bugs antes 
+	 de pasar el código a producción incorporándolo a la rama master.
+
+		Las creamos a partir de la rama develop
+		Las fusionamos a la rama master y develop
+
+hotfix: estas ramas las utilizamos para corregir errores y bugs en el 
+	código en producción. Funcionan de forma parecida a las ramas 
+	release, pero debemos saber que los hotfix no se planifican.
+		Las creamos a partir de la rama master
+		Las fusionamos a la rama master y develop

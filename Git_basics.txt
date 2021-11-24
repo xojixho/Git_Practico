@@ -1,4 +1,13 @@
-changes lifecycle
+#UPDATE 
+cmd
+Since Git 2.16.1(2) you can use
+C:\> git update-git-for-windows
+In version between 2.14.2 and 2.16.1, the command was
+C:\> git update
+
+********************
+* changes lifecycle*
+********************
 
 $git status
 
@@ -72,7 +81,7 @@ a714a94 (HEAD -> main) Agregado notas para git en Git_basics.txt
 69a6239 (origin/main, origin/HEAD) Initial commit
 
 
-$git log  -->gitVer todo los commit
+$git log  --> ver todo los commit
 
 $git log --oneline --> ver commit hash por linea
 
@@ -99,9 +108,9 @@ $git pull
 
 consiste de dos pasos internamente
 
-git fetch  --> descarga los archivos del repo. remoto
+git fetch  --> descarga los archivos del repo.//--> remoto
 		pero no los integra localmente
-git merge --> realiza  la integración al repo.local
+git merge --> realiza  la integración al repo.//--> local
 
 
 ________________
@@ -182,3 +191,17 @@ más de un problema.
 DANGER!!!
 NEVER DO A REBASE IN A PUBLIC BRANCH!!!!!!
 
+
+************************
+* Edit or remove origin*
+************************
+#Edit
+$git remote set-url origin git://new.url.here
+#Remove
+git remote remove origin
+
+************************
+* Credential Issues    *
+************************
+git credential-manager erase <url>
+https://stackoverflow.com/questions/38549834/how-do-i-sign-out-in-the-git-bash-console-in-windows/38553149#38553149

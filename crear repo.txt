@@ -8,12 +8,19 @@ git clone [url]
 2)Estar en la carpeta del proyecto.
 
 echo "# mintic2021_retos" >> README.md
+
 git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
+
+git add README.md --> agrega el archivo de lectura README.md 
+			( pero primero$mkdir README.md)
+
+git commit -m "first commit" ---> primer commit con descripcion 
+
+git branch -M main  --> Cambia el nombre de la rama
+
 git remote add origin https://github.com/xojixho/mintic2021_retos.git
-git push -u origin main
+gi
+git push -u origin maingiy
 
 	$git init
 		agregar files al stage 

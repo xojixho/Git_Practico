@@ -1,0 +1,28 @@
+Pull Request
+Pull Request es la acción que realizamos para validar el código 
+que se va a mergear de una rama a otra. En este proceso de validación 
+pueden entrar los factores que queramos: Builds (validaciones automáticas),
+asignación de código a tareas, validaciones manuales por parte del equipo, 
+despliegues, etc.
+
+
+Importancia de los buenos PR
+Debemos tener una cultura de realizar buenos PR, dentro de nuestro equipo se
+puede marcar una gran diferencia en la productividad. Si nuestros PR son pequeños,
+frecuentes y fáciles de revisar y probar, se abrirán y fusionarán rápidamente
+
+Por otro lado, si tenemos PR infrecuentes y grandes que rebotan entre 
+desarrolladores, revisores, evaluadores y propietarios de productos 
+puede ralentizar el progreso significativamente, lo que hace que el equipo 
+pierda mucho tiempo lidiando con conflictos de fusión y apagando pequeños 
+incendios en todas partes
+
+Revisión de los PR
+Generalmente cuando se crea un PR, debe existir lo que llamamos revisor o 
+revisores que verifiquen que nuestro código cumple con las normas que plantea 
+el negocio, el avance realizado, el cumplimiento de las buenas prácticas, etc.
+
+Se recomienda por proyecto que existan dos revisores por PR. Luego de que se 
+revise el código y dependiendo su estado, los revisores deben realizar una 
+retroalimentación en caso de encontrar errores para que sean corregidos, y 
+depende ya si aprueban y mergean los cambios contra la rama o declinan el PR

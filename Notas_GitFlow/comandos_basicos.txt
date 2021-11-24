@@ -1,0 +1,41 @@
+git config --global.name "usuario"
+git config --global.email "email"
+
+git config --global --list
+
+git init: nos permite realizar la creación de un nuevo repositorio
+
+git clone /ruta/del/repositorio: este comando lo utilizamos para 
+				 realizar una copia local del repositorio que se encuentra en la nube 
+
+git clone username@host:/ruta/del/repositorio: este nos permite 
+					       clonar el repositorio pero si utilizamos un servidor remoto
+
+git add .: esto nos permite registrar los cambios de todos los 
+	   archivos que impactamos, es el primer paso en el flujo de trabajo básico (tambien existe git add <archivo> -> este solo es para registrar los cambios a ese archivo)
+
+git commit -m "Mensaje del Commit": este comando es para confirmar 
+				    los cambios que estamos próximos a subir, pero todavía no están en el repositorio remoto
+
+git push origin <rama>: cuando realizamos el comando del commit, 
+			los cambios están listos para subirse al repositorio remoto, con el push subimos y fusionamos esos cambios a la rama que le estamos apuntando
+
+git checkout -b <rama>: este comando nos permite crear una rama y 
+			cambiarnos a ella inmediatamente
+
+git checkout <rama>: nos permite cambiarnos a la rama que le indiquemos
+
+git branch -d <rama>: cuando necesitamos eliminar una rama utilizamos 
+		      este comando (debemos tener mucho cuidado al eliminar la rama, que no afecte a alguien y saber que esa rama si debe ser eliminada)
+
+git pull origin <rama>: con este comando actualizamos nuestra rama 
+			local o en la que estemos posicionados de manera local, y la actualiza con la rama en el repositorio remoto que le indiquemos en el comando
+
+git merge <rama>: este comando nos permite fusionar los cambio de una 
+		  rama local a otra rama local
+
+git diff <rama fuente> <rama objetivo>: este nos muestra los cambios 
+					que tienen una rama con otra
+
+git status: mostrar el estado actual de la rama(branch), como los cambios 
+	    que hay sin hacer commit.
